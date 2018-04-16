@@ -27,7 +27,7 @@ app.post('/api/data', function(request,response){
 		return weather_file.weather(result.lat, result.lng);
 	}).then((result)=>{
 		weather = result;
-		response.send('Hello this is the' + weather +'in' + place);
+		response.send(weather);
 	}).catch((error)=>{
 		console.log(error)
 	})
